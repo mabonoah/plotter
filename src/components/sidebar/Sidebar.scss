@@ -1,0 +1,17 @@
+$cell-padding: 0.5rem 1rem;
+
+.sidebar-container {
+    width: 12rem;
+    border: 0.1rem solid gray;
+
+    h5 {
+        padding: $cell-padding;
+        border-bottom: 0.1rem solid gray;
+    }
+
+    .column {
+        cursor: pointer;
+        display: block;
+        padding: $cell-padding;
+    }
+}
