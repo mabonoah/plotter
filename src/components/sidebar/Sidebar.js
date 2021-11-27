@@ -2,13 +2,13 @@ import "./Sidebar.scss";
 import { useEffect, useState } from "react";
 import { getAll } from "../../api/api";
 
-function Sidebar() {
+function Sidebar({ setLoading }) {
   // columns state
   const [columns, setColumns] = useState([]);
   // set columns
   useEffect(() => {
-    getAll("columns", setColumns);
-  }, []);
+    getAll("columns", setColumns, setLoading);
+  }, [setLoading]);
 
   return (
     <div className="sidebar-container">
