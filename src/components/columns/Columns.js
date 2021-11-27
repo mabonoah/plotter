@@ -1,8 +1,8 @@
-import "./Sidebar.scss";
+import "./Columns.scss";
 import { useEffect, useState } from "react";
 import { getAll } from "../../api/api";
 
-function Sidebar({ setLoading }) {
+function Columns({ setLoading }) {
   // columns state
   const [columns, setColumns] = useState([]);
   // set columns
@@ -11,7 +11,7 @@ function Sidebar({ setLoading }) {
   }, [setLoading]);
 
   return (
-    <div className="sidebar-container">
+    <div className="columns-container">
       <h5>Columns</h5>
       {columns.map((column, index) => {
         return (
@@ -24,4 +24,4 @@ function Sidebar({ setLoading }) {
   );
 }
 
-export default Sidebar;
+export default Columns;

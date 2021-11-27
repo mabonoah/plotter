@@ -1,10 +1,10 @@
 import './Plotter.scss';
-import Sidebar from "../../components/sidebar/Sidebar";
+import Columns from "../../components/columns/Columns";
 
 function Plotter({ setLoading }) {
   return (
     <div>
-      <Sidebar setLoading={setLoading} />
+      <Columns setLoading={setLoading} />
     </div>
   );
 }
