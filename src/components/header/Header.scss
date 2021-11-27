@@ -1,7 +1,7 @@
 @import "../../assets/style/variables.scss";
 
 header {
-    min-height: 4rem;
+    min-height: $app-header-height;
     display: flex;
     justify-content: center;
     align-items: center;

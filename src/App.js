@@ -12,10 +12,8 @@ function App() {
   return (
     <div className="app-container">
       <Header title="Plotter" />
-      <section className="main-container">
-        <Plotter setLoading={setLoading} />
-        <Spinner loading={loading} />
-      </section>
+      <Plotter setLoading={setLoading} />
+      <Spinner loading={loading} />
       <ToastContainer />
     </div>
   );

@@ -1,4 +1,15 @@
+// colors
 $light-color: #ffffff;
 $dark-color: #24292f;
 $overlay-color: gray;
+// borders
 $main-border: 0.1rem solid gray;
+// padding
+$default-padding: 0.5rem 1rem;
+$btn-padding: 0.5rem 0.7rem;
+// height
+$overlay-height: calc(100% - 3.5rem);
+$function-height: 2.8rem;
+$app-header-height: 3.5rem;
+// width
+$max-app-width: 80rem;

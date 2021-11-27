@@ -1,19 +1,17 @@
 @import "../../assets/style/variables.scss";
 
-$cell-padding: 0.5rem 1rem;
-
 .columns-container {
-    width: 12rem;
+    width: 100%;
     border: $main-border;
 
     h5 {
-        padding: $cell-padding;
+        padding: $default-padding;
         border-bottom: $main-border;
     }
 
     .column {
         cursor: pointer;
         display: block;
-        padding: $cell-padding;
+        padding: $default-padding;
     }
 }

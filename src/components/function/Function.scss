@@ -1,0 +1,49 @@
+@import "../../assets/style/variables.scss";
+@import "../../assets/style/mixins.scss";
+
+.function-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    .label {
+        min-width: 6rem;
+    }
+
+    .box {
+        border: $main-border;
+        width: 100%;
+        min-height: $function-height;
+    }
+
+    .btn {
+        cursor: pointer;
+        height: $function-height;
+        color: $light-color;
+        background: $dark-color;
+        border: none;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-family: inherit;
+        padding: $btn-padding;
+    }
+
+    .btn:focus {
+        outline: none;
+    }
+
+    .btn:active {
+        @include transform(scale(0.98));
+    }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+    .function-container {
+        margin-bottom: 0.5rem;
+
+        .label {
+            min-width: 5rem;
+        }
+    }
+}

@@ -2,9 +2,9 @@ import "./Spinner.scss";
 import { css } from "@emotion/react";
 import { ScaleLoader } from "react-spinners";
 const override = css`
-  margin: 0 auto;
-  display: flex;
-  align-self: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 `;
 
 function Spinner({ loading }) {
