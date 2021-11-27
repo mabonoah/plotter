@@ -3,7 +3,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 import { ToastContainer } from "react-toastify";
 import Header from "./components/header/Header";
-import Sidebar from "./components/sidebar/Sidebar";
+import Plotter from "./pages/plotter/Plotter";
 import Spinner from "./components/spinner/Spinner";
 
 function App() {
@@ -11,9 +11,9 @@ function App() {
 
   return (
     <div className="app-container">
-      <Header />
+      <Header title="Plotter" />
       <section className="main-container">
-        <Sidebar setLoading={setLoading} />
+        <Plotter setLoading={setLoading} />
         <Spinner loading={loading} />
       </section>
       <ToastContainer />
