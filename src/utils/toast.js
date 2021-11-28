@@ -1,6 +1,6 @@
 import { toast } from "react-toastify";
 
-export const successToast = (message, position = toast.POSITION.TOP_RIGHT) => {
+export const successToast = (message, position = toast.POSITION.BOTTOM_CENTER) => {
   toast.success(message, {
     position: position,
   });

@@ -5,15 +5,35 @@ import Column from "../column/Column";
 import { useDrop } from "react-dnd";
 import { warnToast } from "../../utils/toast";
 
-function Function({ type }) {
+function Function({ type, onChange }) {
   // board state
   const [board, setBoard] = useState([]);
 
   // board Ref
   const boardRef = useRef();
+
   useEffect(() => {
     boardRef.current = board;
-  });
+    changeHandler();
+  }, [type, board, onChange]);
+
+  /** Passes data to onChange fn depending on board and type values. */
+  const changeHandler = () => {
+    const isDimension = type === FunctionType.dimension;
+    // If function type is a dimension and board has no value, set an empty string to onChange fn,
+    // else pass an empty array.
+    if (!board || !board.length) {
+      const data = isDimension ? "" : [];
+      onChange(data);
+      return;
+    }
+    // If function type is a dimension, set the first column name to onChange fn,
+    // else pass an array of columns names.
+    const data = isDimension
+      ? board[0].name
+      : board.map((column) => column.name);
+    onChange(data);
+  };
 
   // useDrop hook
   const [, drop] = useDrop(() => ({

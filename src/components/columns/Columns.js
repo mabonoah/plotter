@@ -6,11 +6,14 @@ import Column from "../column/Column";
 function Columns({ setLoading }) {
   // columns state
   const [columns, setColumns] = useState([]);
+
   // set columns
   useEffect(() => {
-    getAll("columns", setColumns, setLoading);
+    getAll("columns", successHandler, setLoading);
   }, [setLoading]);
 
+  const successHandler = (data) => setColumns(data);
+  
   return (
     <div className="columns-container">
       <h5>Columns</h5>

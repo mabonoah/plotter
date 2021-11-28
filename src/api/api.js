@@ -21,10 +21,10 @@ export async function getAll(pathName, successHandler, setLoading) {
     });
 }
 
-export async function update(pathName, data, successHandler, setLoading) {
+export async function post(pathName, data, successHandler, setLoading) {
   setLoading(true);
   api
-    .put(pathName, data)
+    .post(pathName, data, { "Content-Type": "application/json" })
     .then(function (response) {
       // handle success
       successHandler(response.data);
