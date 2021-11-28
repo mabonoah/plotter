@@ -6,7 +6,7 @@ export const successToast = (message, position = toast.POSITION.BOTTOM_CENTER) =
   });
 };
 
-export const warnToast = (message, position = toast.POSITION.TOP_CENTER) => {
+export const warnToast = (message, position = toast.POSITION.BOTTOM_CENTER) => {
   toast.warn(message, {
     position: position,
   });
