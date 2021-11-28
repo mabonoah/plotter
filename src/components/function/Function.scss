@@ -11,9 +11,18 @@
     }
 
     .box {
-        border: $main-border;
+        display: flex;
+        align-items: center;
         width: 100%;
         min-height: $function-height;
+        border: $main-border;
+
+        .column {
+            display: inline-block;
+            margin-left: 0.5rem;
+            padding: $function-column-padding;
+            border: $main-border;
+        }
     }
 
     .btn {

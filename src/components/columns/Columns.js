@@ -1,6 +1,7 @@
 import "./Columns.scss";
 import { useEffect, useState } from "react";
 import { getAll } from "../../api/api";
+import Column from "../column/Column";
 
 function Columns({ setLoading }) {
   // columns state
@@ -14,11 +15,7 @@ function Columns({ setLoading }) {
     <div className="columns-container">
       <h5>Columns</h5>
       {columns.map((column, index) => {
-        return (
-          <span className="column" key={index}>
-            {column.name}
-          </span>
-        );
+        return <Column data={column} key={index} />;
       })}
     </div>
   );

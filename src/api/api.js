@@ -1,5 +1,5 @@
 import axios from "axios";
-import { toast } from "react-toastify";
+import { errorToast } from "../utils/toast";
 
 const api = axios.create({
   baseURL: "https://plotter-task.herokuapp.com/",
@@ -39,7 +39,5 @@ export async function update(pathName, data, successHandler, setLoading) {
 
 function errorHandler(error) {
   const errorMessage = error.message;
-  toast.error(`${errorMessage}!`, {
-    position: toast.POSITION.BOTTOM_CENTER,
-  });
+  errorToast(`${errorMessage}!`);
 }
